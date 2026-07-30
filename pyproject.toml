@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ulid-cli"
+version = "1.0.0"
+description = "Generate ULIDs (48-bit timestamp + 80-bit randomness, Crockford Base32), no dependencies."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "All Rights Reserved" }
+authors = [{ name = "sidcore-dev" }]
+keywords = ["ulid", "uuid", "cli", "devtools", "id"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Environment :: Console",
+    "Topic :: Software Development :: Build Tools",
+]
+
+[project.scripts]
+ulid-cli = "ulid_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
